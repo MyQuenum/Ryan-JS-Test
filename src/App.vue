@@ -68,7 +68,7 @@
         </div>
       </div>
     </section>
-    <section class="h-[300vw]">
+    <section class="h-[285vw]">
       <div class="overflow-hidden sticky h-screen top-0">
         <div
           id="scrollSection"
