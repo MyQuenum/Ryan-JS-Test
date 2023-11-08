@@ -68,7 +68,7 @@
         </div>
       </div>
     </section>
-    <section class="h-[285vw]">
+    <section class="h-[300vw]">
       <div class="overflow-hidden sticky h-screen top-0">
         <div
           id="scrollSection"
@@ -91,7 +91,7 @@
             <div
               ref="slideDown"
               id="slideDown"
-              class="w-1/2 flex justify-around pr-16 mt-[-200px]"
+              class="w-1/2 flex justify-around pr-16 translate-y-[-200px]"
             >
               <div class="flex flex-col items-center">
                 <div class="flex flex-col items-center">
@@ -230,7 +230,7 @@ onMounted(() => {
       sectionTwoRect.top < window.innerHeight && sectionTwoRect.bottom >= 0;
 
     // Calculez la translation en fonction de la visibilité
-    const translateY = isVisible ? (sectionTwoRect.top / window.innerHeight) * 200 : 0;
+    const translateY = isVisible ? (sectionTwoRect.top / window.innerHeight) * 400 : 0;
     slideDown.value.style.transform = `translateY(${1 - translateY}px)`;
 
     const opaques = document.querySelectorAll(".opaque");
@@ -242,7 +242,7 @@ onMounted(() => {
     const offsetTop = stickySection.value.parentElement.offsetTop;
     const scrollSection = document.querySelector("#scrollSection");
     scrollPercentage.value =
-      ((window.scrollY - offsetTop) / window.innerHeight - 1) * 100;
+      ((window.scrollY - offsetTop) / window.innerHeight - 1.5) * 100;
     scrollSection.style.transform =
       scrollPercentage.value > 0
         ? `translate3d(${-scrollPercentage.value}vw, 0, 0)`
