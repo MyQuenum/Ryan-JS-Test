@@ -54,15 +54,15 @@
         <div class="grid grid-cols-2 items-center gap-x-4 w-fit rotate-12">
           <img
             class="w-[200px] h-[200px] object-cover"
-            src="src\assets\ticket2.png"
+            src="https://global-uploads.webflow.com/5f185d05b7c150150d3716cf/5f859bbcb56c052af2dc8037_sol5-header.svg"
             alt=""
           /><img
             class="w-[200px] h-[200px] object-cover"
-            src="src\assets\inscription.png"
+            src="https://static.vecteezy.com/ti/vecteur-libre/p1/4926537-hand-drawn-doodle-hand-holding-digital-ticket-on-smartphone-illustration-isolated-vectoriel.jpg"
             alt=""
           /><img
             class="w-[200px] h-[200px] object-cover"
-            src="src\assets\billet.png"
+            src="https://centi.ch/wp-content/uploads/2022/01/Event-all-banner.webp"
             alt=""
           />
         </div>
