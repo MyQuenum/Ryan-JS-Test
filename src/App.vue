@@ -1,14 +1,14 @@
 <template>
   <header class="font-marko" :class="headerClass">
-    <span class="flex items-center gap-2 fixed z-10 top-6 left-8">
-      <h1 class="font-bold text-[2rem]">Ticketora</h1>
+    <span class="flex items-center gap-2 fixed z-10 top-12 left-8">
+      <h1 class="font-bold text-[1.5rem]">Ticketora</h1>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="w-10 h-10"
+        class="w-8 h-8"
       >
         <path
           stroke-linecap="round"
@@ -24,7 +24,7 @@
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="w-10 h-10 fixed z-10 top-6 right-8"
+        class="w-8 h-8 fixed z-10 top-12 right-8"
       >
         <path
           stroke-linecap="round"
@@ -35,40 +35,139 @@
     </div>
   </header>
   <main class="w-full h-full">
-    <section ref="sectionOne" id="one" class="p-16 pl-36 pb-0 bg-green-400">
-      <span class="text-[4rem] uppercase font-bold"
-        >&emsp;&emsp;Gérez votre
-        <span class="text-outline-white text-transparent">billeterie digitale</span> et
-        vos
-        <span class="text-outline-white text-transparent">inscriptions en ligne</span> en
-        quelques clics</span
-      >
-      <div class="flex gap-20">
-        <span class="py-4 text-lg block w-1/2 text-white"
-          >Avec Ticketora, vous gérez facilement la vente de billets, les inscriptions des
-          participants et le contrôle de l'accès à l'événement. Nous sommes là pour rendre
-          votre parcours de gestion d'événements aussi fluide que possible, en vous
-          fournissant des outils innovants et des solutions qui transforment votre vision
-          en expériences réussies et inoubliables.</span
+    <section ref="sectionOne" id="one" class="bg-[#222222] pt-32 h-[150vh]">
+      <div class="text-[9rem] uppercase font-bold leading-none text-white">
+        <span
+          >&emsp;&emsp;Your
+          <span class="text-outline-white text-transparent">ticketing </span></span
         >
-        <div class="grid grid-cols-2 items-center gap-x-4 w-fit rotate-12">
-          <img
-            class="w-[200px] h-[200px] object-cover"
-            src="https://global-uploads.webflow.com/5f185d05b7c150150d3716cf/5f859bbcb56c052af2dc8037_sol5-header.svg"
-            alt=""
-          /><img
-            class="w-[200px] h-[200px] object-cover"
-            src="https://static.vecteezy.com/ti/vecteur-libre/p1/4926537-hand-drawn-doodle-hand-holding-digital-ticket-on-smartphone-illustration-isolated-vectoriel.jpg"
-            alt=""
-          /><img
-            class="w-[200px] h-[200px] object-cover"
-            src="https://centi.ch/wp-content/uploads/2022/01/Event-all-banner.webp"
-            alt=""
-          />
+        <span class="pl-40"> solution</span>
+      </div>
+      <div class="flex gap-20 mt-8">
+        <div class="w-1/2 pl-32">
+          <span class="py-8 text-lg block text-[#d3d3d3]"
+            >With Ticketora, you can easily manage ticket sales, attendee registration and
+            event access control. We're here to make your event management journey as
+            smooth as possible, providing you with innovative tools and solutions that
+            transform your vision into successful, unforgettable experiences.</span
+          >
+          <div class="text-white text-2xl flex gap-2 items-center">
+            <span>Try Ticketora Now!</span>
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-12 h-12 hover:bg-white hover:rounded-full"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="grid w-1/2 grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="grid justify-items-end items-center">
+            <div>
+              <img
+                class="h-auto w-[200px]"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto w-[150px]"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="grid gap-4">
+            <div>
+              <img
+                class="h-auto max-w-full"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="grid gap-4">
+            <div>
+              <img
+                class="h-auto max-w-full"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="grid gap-4">
+            <div>
+              <img
+                class="h-auto max-w-full"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <section class="h-[285vw]">
+    <section class="h-[270vw]">
       <div class="overflow-hidden sticky h-screen top-0">
         <div
           id="scrollSection"
@@ -76,16 +175,20 @@
         >
           <div ref="sectionTwo" id="two" class="h-screen w-screen flex">
             <div class="w-1/2 pt-36 pl-36">
-              <h2 class="text-green-400 text-[4rem] font-bold">À propos de nous</h2>
-              <span class="py-4 my-8 text-lg block"
+              <span
+                class="text-transparent text-outline-black absolute top-16 left-8 font-bold text-[14rem] opacity-10 leading-none"
+                >About</span
+              >
+              <h2 class="text-[3rem]">About us</h2>
+              <span class="py-8 mt-8 text-lg block font-thin"
                 >Notre mission consiste à simplifier l'organisation de vos événements
                 grâce à une technologie de pointe, des processus de billetterie fluides et
                 une inscription en ligne sans souci. Nous vous permettons de donner vie à
                 vos événements grâce à une planification efficace, des interfaces
                 conviviales et des informations complètes basées sur les données.</span
               >
-              <button class="bg-green-400 px-4 py-2 rounded-3xl font-bold">
-                En savoir plus
+              <button class="bg-black text-lg text-white px-6 py-3 rounded-3xl font-bold">
+                Learn more
               </button>
             </div>
             <div
@@ -98,7 +201,7 @@
                   <div class="w-[2px] h-[300px] bg-black"></div>
                   <div class="w-3 h-3 bg-black"></div>
                 </div>
-                <span class="text-green-400 text-[4rem] font-bold">3</span>
+                <span id="offers" class="text-[4rem] font-bold number">3</span>
                 <span class="font-bold text-lg opacity-0 opaque"
                   >Offres personnalisables</span
                 >
@@ -108,7 +211,7 @@
                   <div class="w-[2px] h-[260px] bg-black"></div>
                   <div class="w-3 h-3 bg-black"></div>
                 </div>
-                <span class="text-green-400 text-[4rem] font-bold">21</span>
+                <span id="partnerships" class="text-[4rem] font-bold number">21</span>
                 <span class="font-bold text-lg opacity-0 opaque">Partenariats</span>
               </div>
               <div class="flex flex-col items-center">
@@ -116,7 +219,7 @@
                   <div class="w-[2px] h-[220px] bg-black"></div>
                   <div class="w-3 h-3 bg-black"></div>
                 </div>
-                <span class="text-green-400 text-[4rem] font-bold">+800</span>
+                <span class="text-[4rem] font-bold"><span class="opaque">+</span><span id="events" class="number">800</span></span>
                 <span class="font-bold text-lg opacity-0 opaque"
                   >Evènements administrés</span
                 >
@@ -126,7 +229,7 @@
           <div
             ref="sectionThree"
             id="three"
-            class="h-screen w-screen flex items-center gap-[300px] bg-[#222222] border-r-green-400 border-r-4"
+            class="h-screen w-screen flex items-center gap-[300px] bg-[#222222]"
           >
             <div class="pl-36 relative">
               <h2 class="text-outline-white text-transparent text-[4rem] font-bold m-24">
@@ -150,7 +253,7 @@
               />
             </svg>
           </div>
-          <div class="h-screen w-screen flex bg-green-200">
+          <div class="h-screen w-screen flex bg-[#222222]">
             <div class="pt-36 pl-36 relative">
               <h2 class="text-outline-green text-transparent text-[4rem] font-bold m-24">
                 Basique
@@ -161,9 +264,9 @@
               >
             </div>
           </div>
-          <div class="h-screen w-screen flex bg-green-300">
+          <div class="h-screen w-screen flex bg-[#222222]">
             <div class="pt-36 pl-36 relative">
-              <h2 class="text-outline-white text-transparent text-[4rem] font-bold m-24">
+              <h2 class="text-outline-green text-transparent text-[4rem] font-bold m-24">
                 Business
               </h2>
               <span
@@ -172,9 +275,9 @@
               >
             </div>
           </div>
-          <div class="h-screen w-screen flex bg-green-400">
+          <div class="h-screen w-screen flex bg-[#222222]">
             <div class="pt-36 pl-36 relative">
-              <h2 class="text-outline-white text-transparent text-[4rem] font-bold m-24">
+              <h2 class="text-outline-green text-transparent text-[4rem] font-bold m-24">
                 Business Premium
               </h2>
               <span
@@ -242,7 +345,7 @@ onMounted(() => {
     const offsetTop = stickySection.value.parentElement.offsetTop;
     const scrollSection = document.querySelector("#scrollSection");
     scrollPercentage.value =
-      ((window.scrollY - offsetTop) / window.innerHeight - 1.5) * 100;
+      ((window.scrollY - offsetTop) / window.innerHeight - 1) * 100;
     scrollSection.style.transform =
       scrollPercentage.value > 0
         ? `translate3d(${-scrollPercentage.value}vw, 0, 0)`
