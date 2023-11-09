@@ -167,7 +167,7 @@
         </div>
       </div>
     </section>
-    <section class="h-[270vw]">
+    <section class="h-[276vw]">
       <div class="overflow-hidden sticky h-screen top-0">
         <div
           id="scrollSection"
@@ -179,7 +179,7 @@
                 class="text-transparent text-outline-black absolute top-16 left-8 font-bold text-[14rem] opacity-10 leading-none"
                 >About</span
               >
-              <h2 class="text-[3rem]">About us</h2>
+              <h2 class="text-[3rem]  font-semibold">About us</h2>
               <span class="py-8 mt-8 text-lg block font-thin"
                 >Notre mission consiste à simplifier l'organisation de vos événements
                 grâce à une technologie de pointe, des processus de billetterie fluides et
@@ -219,7 +219,10 @@
                   <div class="w-[2px] h-[220px] bg-black"></div>
                   <div class="w-3 h-3 bg-black"></div>
                 </div>
-                <span class="text-[4rem] font-bold"><span class="opaque">+</span><span id="events" class="number">800</span></span>
+                <span class="text-[4rem] font-bold"
+                  ><span class="opaque">+</span
+                  ><span id="events" class="number">800</span></span
+                >
                 <span class="font-bold text-lg opacity-0 opaque"
                   >Evènements administrés</span
                 >
@@ -289,19 +292,77 @@
         </div>
       </div>
     </section>
+    <section class="h-[201vh]">
+      <div ref="sectionFour" id="four" class="h-screen w-screen flex justify-between sticky top-0">
+        <div class="w-1/2 pt-52 pl-36">
+          <span
+            class="text-transparent text-outline-black absolute top-36 left-8 font-bold text-[14rem] opacity-10 leading-none"
+            >Services</span
+          >
+          <h2 class="text-[3rem] font-semibold">Services</h2>
+          <span class="py-8 mt-8 text-lg block font-thin"
+            >Services We love crafting beautiful, smart and inspired work that is focused
+            on your business' goals and customers. We do this across multiple touch points
+            to help you achieve your vision.</span
+          >
+          <button class="bg-black text-lg text-white px-6 py-3 rounded-3xl font-bold">
+            Discover
+          </button>
+        </div>
+        <div class="w-1/3 flex justify-around pr-16">
+          <div class="flex flex-col items-center translate-y-[-20px]">
+            <div class="flex flex-col items-center">
+              <div ref="verticalLine4" class="w-[2px] bg-black"></div>
+              <div class="w-3 h-3 bg-black"></div>
+              <span ref="brandingTag" class="font-bold text-[2rem] opacity-0">Branding</span>
+              <div ref="verticalLine6" class="w-[2px] bg-black"></div>
+              <div ref="cube6" class="bg-black w-3"></div>
+              <span ref="motionTag" class="font-bold text-[2rem] opacity-0">Motion</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center translate-y-[-20px]">
+            <div class="flex flex-col items-center">
+              <div ref="verticalLine5" class="w-[2px] bg-black"></div>
+              <div class="w-3 h-3 bg-black"></div>
+              <span ref="strategyTag" class="font-bold text-[2rem] opacity-0">Strategy</span>
+              <div ref="verticalLine7" class="w-[2px] bg-black"></div>
+              <div ref="cube7" class="bg-black w-3"></div>
+              <span ref="marketingTag" class="font-bold text-[2rem] opacity-0">Marketing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div ref="indicator" class="w-3 h-3 bg-transparent"></div>
+    </section>
   </main>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+import Lenis from "@studio-freight/lenis";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const sectionOne = ref(null);
 const sectionTwo = ref(null);
 const sectionThree = ref(null);
+const sectionFour = ref(null);
 const slideDown = ref(null);
 
 const stickySection = ref(null);
 const scrollPercentage = ref(null);
+
+const verticalLine4 = ref(null);
+const verticalLine5 = ref(null);
+const verticalLine6 = ref(null);
+const verticalLine7 = ref(null);
+const cube6 = ref(null);
+const cube7 = ref(null);
+const indicator = ref(null);
+const brandingTag = ref(null);
+const strategyTag = ref(null);
+const motionTag = ref(null);
+const marketingTag = ref(null);
 
 let headerClass = ref("");
 
@@ -357,6 +418,228 @@ onMounted(() => {
   headerObserver.observe(sectionThree.value);
 
   stickySection.value = document.querySelector(".sticky");
+
+  //Lenis smooth scroll
+
+  const lenis = new Lenis();
+
+  lenis.on("scroll", (e) => {
+    console.log(e);
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+
+  //gsap scroll trigger part
+  gsap.registerPlugin(ScrollTrigger);
+
+  const timeline1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: sectionFour.value,
+      start: 'top 75%',
+      end: 'top top',
+      scrub: true,
+      markers: false
+    }
+  });
+
+  const timeline2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: sectionFour.value,
+      start: 'top 75%',
+      end: 'top top',
+      scrub: true,
+      markers: false
+    }
+  });
+
+  const timeline3 = gsap.timeline({
+    scrollTrigger: {
+      trigger: indicator.value,
+      start: 'top bottom',
+      end: 'top 80%',
+      scrub: true,
+      markers: false
+    }
+  });
+
+  const timeline4 = gsap.timeline({
+    scrollTrigger: {
+      trigger: indicator.value,
+      start: 'top 79%',
+      end: 'top 60%',
+      scrub: true,
+      markers: false
+    }
+  });
+
+  const timeline5 = gsap.timeline({
+    scrollTrigger: {
+      trigger: indicator.value,
+      start: 'top 79%',
+      end: 'top 60%',
+      scrub: true,
+      markers: false
+    }
+  });
+
+  const timeline6 = gsap.timeline({
+    scrollTrigger: {
+      trigger: indicator.value,
+      start: 'top 79%',
+      end: 'top 60%',
+      scrub: true,
+      markers: false
+    }
+  });
+
+  const timeline7 = gsap.timeline({
+    scrollTrigger: {
+      trigger: indicator.value,
+      start: 'top 79%',
+      end: 'top 40%',
+      scrub: true,
+      markers: false
+    }
+  });
+
+  const timeline8 = gsap.timeline({
+    scrollTrigger: {
+      trigger: indicator.value,
+      start: 'top 59%',
+      end: 'top 55%',
+      scrub: true,
+      markers: false
+    }
+  });
+
+  const timeline9 = gsap.timeline({
+    scrollTrigger: {
+      trigger: indicator.value,
+      start: 'top 59%',
+      end: 'top 55%',
+      scrub: true,
+      markers: false
+    }
+  });
+
+  const timeline10 = gsap.timeline({
+    scrollTrigger: {
+      trigger: indicator.value,
+      start: 'top 58%',
+      end: 'top 40%',
+      scrub: true,
+      markers: false
+    }
+  });
+
+  const timeline11 = gsap.timeline({
+    scrollTrigger: {
+      trigger: indicator.value,
+      start: 'top 58%',
+      end: 'top 40%',
+      scrub: true,
+      markers: false
+    }
+  });
+
+  const timeline12 = gsap.timeline({
+    scrollTrigger: {
+      trigger: indicator.value,
+      start: 'top 58%',
+      end: 'top 40%',
+      scrub: true,
+      markers: false
+    }
+  });
+
+  const timeline13 = gsap.timeline({
+    scrollTrigger: {
+      trigger: indicator.value,
+      start: 'top 58%',
+      end: 'top 40%',
+      scrub: true,
+      markers: false
+    }
+  });
+
+  const timeline14 = gsap.timeline({
+    scrollTrigger: {
+      trigger: indicator.value,
+      start: 'top 39%',
+      end: 'top top',
+      scrub: true,
+      markers: false
+    }
+  });
+
+  const timeline15 = gsap.timeline({
+    scrollTrigger: {
+      trigger: indicator.value,
+      start: 'top 39%',
+      end: 'top top',
+      scrub: true,
+      markers: false
+    }
+  });
+
+  const timeline16 = gsap.timeline({
+    scrollTrigger: {
+      trigger: indicator.value,
+      start: 'top 39%',
+      end: 'top top',
+      scrub: true,
+      markers: false
+    }
+  });
+
+  const timeline17 = gsap.timeline({
+    scrollTrigger: {
+      trigger: indicator.value,
+      start: 'top 39%',
+      end: 'top top',
+      scrub: true,
+      markers: false
+    }
+  });
+
+  timeline1.to(verticalLine4.value, {height: '103vh'});
+
+  timeline2.to(verticalLine5.value, {height: '92vh'});
+
+  timeline3.to(verticalLine5.value, {height: '103vh'});
+
+  timeline4.to(verticalLine4.value, {height: '92vh'});
+
+  timeline5.to(verticalLine5.value, {height: '71vh'});
+
+  timeline6.to(brandingTag.value, {opacity: 1});
+
+  timeline7.to(strategyTag.value, {opacity: 1});
+
+  timeline8.to(cube6.value, {height: '12px'});
+
+  timeline9.to(cube7.value, {height: '12px'});
+
+  timeline10.to(verticalLine4.value, {height: '70vh'});
+
+  timeline11.to(verticalLine6.value, {height: '22vh'});
+
+  timeline12.to(verticalLine5.value, {height: '49vh'});
+
+  timeline13.to(verticalLine7.value, {height: '22vh'});
+
+  timeline14.to(verticalLine4.value, {height: '40vh'});
+
+  timeline15.to(verticalLine5.value, {height: '19vh'});
+
+  timeline16.to(motionTag.value, {opacity: 1});
+
+  timeline17.to(marketingTag.value, {opacity: 1});
 });
 
 onUnmounted(() => {
